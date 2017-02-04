@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -rfv dir.js/*
+rm -Rfv dir.js/*
