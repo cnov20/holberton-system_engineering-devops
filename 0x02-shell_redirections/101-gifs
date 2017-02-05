@@ -1,2 +1,2 @@
 #!/bin/bash
-find *.gif | cut -d "." -f 1 | sort -nk4
+find *.gif | cut -d "." -f 1 | sort -k4
