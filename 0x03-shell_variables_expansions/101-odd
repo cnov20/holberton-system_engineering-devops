@@ -1,2 +1,2 @@
 #!/bin/bash
-sed -n 'g;n;p'
+sed -n 'p;n'
