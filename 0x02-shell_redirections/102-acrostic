@@ -1,2 +1,2 @@
 #!/bin/bash
-echo | tr -s ' '  '\n' | cut -c 1
+cut -c -1 | tr '\n' ' ' | tr -d ' ' | rev | rev
