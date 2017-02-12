@@ -1,0 +1,50 @@
+total 152
+drwxrwxr-x 3 vagrant vagrant 4096 Feb  4 05:41 .
+drwxrwxr-x 6 vagrant vagrant 4096 Feb  3 22:26 ..
+-rwxrw-r-- 1 vagrant vagrant   31 Feb  3 22:21 0-hello_world
+-rwxrw-r-- 1 vagrant vagrant   31 Feb  3 22:15 0-hello_world~
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:28 10-no_more_js
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:28 11-directories
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:29 12-newest_files
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:29 13-unique
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:29 14-findthatword
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:29 15-countthatword
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:30 16-whatsnext
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:30 17hidethisword
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:30 18-letteronly
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:30 19-AZ
+-rwxrw-r-- 1 vagrant vagrant   28 Feb  3 23:44 1-confused_smiley
+-rwxrw-r-- 1 vagrant vagrant   29 Feb  3 23:44 1-confused_smiley~
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:31 20-hiago
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:31 21-reverse
+-rw-rw-r-- 1 vagrant vagrant   11 Feb  3 21:32 22-users_and_homes
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:31 22-users_and_homes~
+-rwxrw-r-- 1 vagrant vagrant   29 Feb  3 23:50 2-hellofile
+-rwxrw-r-- 1 vagrant vagrant   35 Feb  3 23:48 2-hellofile~
+-rwxrw-r-- 1 vagrant vagrant   46 Feb  3 23:59 3-twofiles
+-rwxrw-r-- 1 vagrant vagrant   40 Feb  3 23:57 3-twofiles~
+-rwxrw-r-- 1 vagrant vagrant   29 Feb  4 00:06 4-lastlines
+-rwxrw-r-- 1 vagrant vagrant   28 Feb  4 00:06 4-lastlines~
+-rwxrw-r-- 1 vagrant vagrant   29 Feb  4 00:45 5-firstlines
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 20:34 5-firstlines~
+-rwxrw-r-- 1 vagrant vagrant   35 Feb  4 00:55 6-third_line
+-rwxrw-r-- 1 vagrant vagrant   41 Feb  4 00:55 6-third_line~
+-rwxrw-r-- 1 vagrant vagrant   87 Feb  4 05:37 7-file
+-rwxrw-r-- 1 vagrant vagrant   88 Feb  4 05:36 7-file~
+-rwxrw-r-- 1 vagrant vagrant   36 Feb  4 05:40 8-cwd_state
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:27 8-cwd_state~
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  3 21:28 9-duplicate_last_line
+drwxrwxr-x 7 vagrant vagrant 4096 Feb  3 22:25 .git
+-rw-rw-r-- 1 vagrant vagrant    0 Feb  4 05:22 \*\'Holberton
+-rw-rw-r-- 1 vagrant vagrant    0 Feb  4 05:23 \*\\'Holberton
+-rw-rw-r-- 1 vagrant vagrant    0 Feb  4 05:26 \*\\'"Holberton School"\'\"*$\?\*\*\*\*\*:)
+-rw-rw-r-- 1 vagrant vagrant    0 Feb  4 05:34 \*\\'"Holberton School"\'\\*$\?\*\*\*\*\*:)
+-rw-rw-r-- 1 vagrant vagrant    0 Feb  4 05:27 \*\\'"Holberton School"\\"*$\?\*\*\*\*\*:)
+-rw-rw-r-- 1 vagrant vagrant    0 Feb  4 05:25 \*\\'"Holberton School"\\*$\?\*\*\*\*\*:)
+-rw-rw-r-- 1 vagrant vagrant    0 Feb  4 05:24 \*\\'Holberton School'\*$\?\*\*\*\*\*:)
+-rw-rw-r-- 1 vagrant vagrant    0 Feb  4 05:34 Holberton School
+-rw-rw-r-- 1 vagrant vagrant  800 Feb  4 00:56 iacta
+-rw-rw-r-- 1 vagrant vagrant    0 Feb  4 05:41 ls_cwd_content
+-rw-rw-r-- 1 vagrant vagrant    0 Feb  4 05:35 School
+-rw-rw-r-- 1 vagrant vagrant    0 Feb  4 05:23 School\'\*$\?\*\*\*\*\*:)
+-rw-rw-r-- 1 vagrant vagrant   61 Feb  4 05:32 touch
