@@ -14,7 +14,7 @@ then
 	echo 'holbertonschool file is empty'
     fi
 
-    if [ -r 'holbertonschool' ]
+    if [ -f 'holbertonschool' ]
     then
 	echo 'holbertonschool is a regular file'
     fi
