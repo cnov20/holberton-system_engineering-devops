@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Script displays contents of current directory
+# In list format, only file name (not number) is displayed
+
+for i in *; do
+    echo "$i" | cut -d '-' -f2
+done
