@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script displays lines containing the keyword 'bash' to get
+# shellcheck disable=SC2009
+ps faux | grep bash
