@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+
+i=9
+school_name="Holberton School"
+until [ $i -lt 0 ]; do
+    echo "$school_name"
+    let i-=1
+done
