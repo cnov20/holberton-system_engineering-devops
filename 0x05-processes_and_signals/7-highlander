@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script creates an infinite loop to disallow a pkill command
+trap 'echo I am invincible!!!' SIGTERM
+while true
+do
+    echo 'To infinity and beyond'
+    sleep 2
+done
