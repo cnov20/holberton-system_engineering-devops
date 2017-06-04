@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This script displays "Holberton School"
+# unless it is specified iteration number -
+# i.e (4) displays "bad luck" / (8) displays "good luck"
+
+i=0
+school_name="Holberton School"
+while [ $i -le 9 ]; do
+    if [ $i == 3 ]
+    then
+	echo "bad luck"
+    elif [ $i == 7 ]
+    then
+	echo "good luck"
+    else
+	echo "$school_name"
+    fi
+    let i+=1
+done
