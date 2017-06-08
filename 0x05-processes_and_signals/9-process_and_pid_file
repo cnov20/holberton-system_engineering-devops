@@ -8,6 +8,6 @@ echo $$ > /var/run/holbertonscript.pid
 while true
 do
     trap 'echo Y u no love me?!' SIGINT
-    trap "rm -f /var/run/holbertonscript.pid; 'echo I hate the kill command'; exit" SIGTERM
+    trap "rm -f /var/run/holbertonscript.pid; 'echo I hate the kill command'; exit" SIGTERM SIGQUIT
     echo 'To infinity and beyond'
 done
