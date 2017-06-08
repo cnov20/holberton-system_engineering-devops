@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+sudo touch /var/run/holbertonscript.pid
+echo $$ > /var/run/holbertonscript.pid
+
+trap 'echo I am invincible!!!' SIGTERM
+trap 'echo Y u no love me?!' SIGINT
+
+while true
+do
+    echo 'To infinity and beyond'
+done
