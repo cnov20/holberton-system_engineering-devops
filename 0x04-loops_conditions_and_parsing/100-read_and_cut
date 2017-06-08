@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 while read line; do
-    username=$(echo $line | cut -d ':' -f1)
-    group_id=$(echo $line | cut -d ':' -f3)
-    full_path=$(echo $line | cut -d ':' -f6)
-    echo $username $group_id $full_path
+    username=$(echo "$line" | cut -d ':' -f1)
+    group_id=$(echo "$line" | cut -d ':' -f3)
+    full_path=$(echo "$line" | cut -d ':' -f6)
+    echo "$username $group_id $full_path"
 done < /etc/passwd
