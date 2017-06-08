@@ -3,7 +3,7 @@
 # and handles various signals
 
 sudo touch /var/run/holbertonscript.pid
-sudo echo $$ > /var/run/holbertonscript.pid
+echo $$ > /var/run/holbertonscript.pid
 
 while true
 do
