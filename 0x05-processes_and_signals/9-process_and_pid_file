@@ -2,12 +2,17 @@
 # This script creates a file containing this processes PID
 # and handles various signals
 
-sudo touch /var/run/holbertonscript.pid
 echo $$ > /var/run/holbertonscript.pid
 
 while true
 do
-    echo 'To infinity and beyond'
     trap 'echo I hate the kill command' SIGTERM
     trap 'echo Y u no love me?!' SIGINT
+
+    if [[ $SIGQUIT || $SIGKILL ]]
+    then
+	sudo rm -f /var/run/holbertonscript.pid
+    else
+	echo 'To infinity and beyond'
+    fi
 done
