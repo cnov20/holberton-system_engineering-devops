@@ -8,11 +8,7 @@ while true
 do
     trap 'echo I hate the kill command' SIGTERM
     trap 'echo Y u no love me?!' SIGINT
+    sudo rm -f '/var/run/holbertonscript.pid' SIGTERM SIGQUIT;
 
-    if [[ $SIGQUIT || $SIGKILL ]]
-    then
-	sudo rm -f /var/run/holbertonscript.pid
-    else
-	echo 'To infinity and beyond'
-    fi
+    echo 'To infinity and beyond'
 done
