@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This script displays information about listening(active) ports
+
+netstat --listening -p
