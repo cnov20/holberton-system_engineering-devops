@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script installs nginx on a web server
+apt-get install nginx
+echo 'Holberton School for the win!'
