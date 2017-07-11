@@ -2,5 +2,5 @@
 # This script installs nginx on a web server
 apt-get -y install nginx
 service nginx start
-echo 'Holberton School for the win!' > /usr/share/nginx/html/index.html
+echo 'hello Holberton School for the win!' > /usr/share/nginx/html/index.html
 service nginx restart
