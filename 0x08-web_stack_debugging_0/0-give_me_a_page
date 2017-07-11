@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # This script debugs a server so it returns a page when querying the root
-docker exec -ti 1f6ae3985ad3 /bin/bash
 sudo service apache2 start
