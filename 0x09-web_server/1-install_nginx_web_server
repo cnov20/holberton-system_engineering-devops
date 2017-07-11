@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # This script installs nginx on a web server
-sudo apt-get update
-sudo apt-get -y install nginx
-sudo service nginx start
+apt-get -y install nginx
+service nginx start
 echo 'hello Holberton School' > /usr/share/nginx/html/index.html
-sudo service nginx restart
+service nginx restart
