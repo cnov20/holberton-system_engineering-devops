@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script installs nginx on a web server
-apt-get install nginx
+apt-get -y install nginx ubuntu@66.70.184.164
 echo 'Holberton School for the win!'
