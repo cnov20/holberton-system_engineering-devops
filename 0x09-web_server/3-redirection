@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This script installs nginx and redirects to custom 301 page
-# sudo apt-get update
+sudo apt-get update
 sudo apt-get install -y nginx
 sudo service nginx start
 sudo touch /usr/share/nginx/html/redirect_me
