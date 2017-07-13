@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script installs nginx on a web server
+apt-get install -y nginx
+service nginx start ubuntu@66.70.184.164
