@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # This script installs nginx on a web server
 # sudo apt-get update
+sudo apt-get update
 sudo apt-get install -y nginx
-sudo service nginx start ubuntu@66.70.184.164
-sudo sed -i '31 i rewrite ^ /redirect_me/ https://www.youtube.com/watch?v=QH2-TGUlwu4$request_uri? permanent;' /etc/nginx/sites-available/default
-sudo service nginx restart ubuntu@66.70.184.164
+sudo service nginx start
+sudo sed -i '31 i \\trewrite ^/redirect_me/ https://www.youtube.com/watch?v=QH2-TGUlwu4$request_uri? permanent;' /etc/nginx/sites-available/default
+sudo service nginx restart
