@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script installs nginx and redirects to custom 301 page
+sudo apt-get update
+sudo apt-get install -y nginx
+sudo service nginx start
+echo 'Ceci n'est pas une page' | sudo tee /usr/share/nginx/html/404.html
+sudo sed -i '43 i \\terror_page 404 /custom_404.html; /etc/nginx/sites-available/default
+sudo service nginx restart
