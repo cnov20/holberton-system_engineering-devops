@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 #This script debugs an issue on a server - so that it listens on a given port
-sudo sed -i 's/listen 8080 default server/listen 80 default server/g' /etc/nginx/sites-enabled/default
-sudo sed -i 's/listen [::]:8080 default server/listen [::]:80 default server/g' /etc/nginx/sites-enabled/default
-sudo sed -i 's/ipv6only=on/ipv4only=on/g' /etc/nginx/sites-enabled/default
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 sudo service nginx restart
