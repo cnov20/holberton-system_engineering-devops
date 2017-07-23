@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#This script debugs an issue on a server - so that it listens on a given port
+sudo apt-get update
+sudo apt-get install -y nginx
+sudo service nginx start
+sed -i 's/listen 8080 default server/listen 80 default server/g' /etc/nginx/sites-enabled/default
+sed -i 's/listen [::]:8080 default server/listen [::]:80 default server/g' /etc/nginx/sites-enabled/default
+sed -i 's/ipv6only=on/ipv4only=on/g' /etc/nginx/sites-enabled/default
+sudo service nginx restart
