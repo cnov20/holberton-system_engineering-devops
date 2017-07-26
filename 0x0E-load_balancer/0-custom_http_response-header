@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script that configured brand new web server on an Ubuntu machine
+# sets custom http response header
+# shellcheck disable=SC2154
+sudo apt-get update
+sudo apt-get install -y nginx
+echo 'X-Served-By:' | sudo tee /usr/share/nginx/html/index.html
+sudo service nginx restart
