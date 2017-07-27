@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-# Script that configured brand new web server on an Ubuntu machine
+# Script that installs and configures HAproxy load balancer on new server
 # sets custom http response header
-# shellcheck disable=SC2154
-# shellcheck disable=SC2016
+sudo add-apt-repository ppa:vbernat/haproxy-1.5
 sudo apt-get update
-sudo apt-get install -y nginx
-sudo service nginx start
-sudo sed -i '16 i \tadd_header X-Served-By $hostname;' /etc/nginx/nginx.conf
-sudo service nginx reload
+sudo apt-get install haproxy
+sudo service haproxy start
+sudo sed -i '8 i ENABLED=1' /etc/default/haproxy
+string='listen Holberton-HAProxy *:80\n\tmode http\n\tstats enable\n\tstats uri /haproxy?status\n\t
+balance roundrobin\n\tserver Server01 10.10.10.1:80 check\n\tserver Server02 10.10.10.2:80 check'
+sudo sed -i '25 i $string' /etc/haproy/haproxy.cfg
+sudo service haproxy reload
