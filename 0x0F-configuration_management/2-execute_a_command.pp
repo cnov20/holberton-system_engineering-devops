@@ -4,5 +4,5 @@ exec { 'killmenow':
   path    => ['/usr/bin'],
   command => 'pkill -f killmenow',
   returns => '0',
-  onlyif => 'pgrep -f killmenow'
+  onlyif  => 'pgrep -f killmenow'
 }
