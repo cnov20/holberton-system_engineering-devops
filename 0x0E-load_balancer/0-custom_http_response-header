@@ -2,8 +2,9 @@
 # Script that configured brand new web server on an Ubuntu machine
 # sets custom http response header
 # shellcheck disable=SC2154
+# shellcheck disable=SC2016
 sudo apt-get update
 sudo apt-get install -y nginx
 sudo service nginx start
-sudo sed -i "16 i \ttadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+sudo sed -i '16 i \t\tadd_header X-Served-By $hostname;' /etc/nginx/nginx.conf
 sudo service nginx reload
