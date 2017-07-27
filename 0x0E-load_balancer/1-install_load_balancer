@@ -8,6 +8,6 @@ sudo apt-get install haproxy
 sudo service haproxy start
 sudo sed -i '8 i ENABLED=1' /etc/default/haproxy
 string='listen Holberton-HAProxy *:80\n\tmode http\n\tstats enable\n\tstats uri /haproxy?status\n\t
-balance roundrobin\n\tserver Server01 10.10.10.1:80 check\n\tserver Server02 10.10.10.2:80 check'
+balance roundrobin\n\tserver 128-web-01 66.70.184.164:80 check\n\tserver 128-web-02 142.44.164.121:80 check'
 sudo sed -i '25 i $string' /etc/haproy/haproxy.cfg
 sudo service haproxy reload
