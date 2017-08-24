@@ -5,7 +5,7 @@
 stringFormat () {
     domain="$1"
     subdomain="$2"
-    result=$(dig $domain $subdomain | grep -A1 'ANSWER SECTION:' | cut -d ':' -f2-)
+    result=$(dig $subdomain.$domain | grep -A1 'ANSWER SECTION:' | cut -d ':' -f2-)
     record_type=$(awk '{ print $4 }' <<< $result)
     destination=$(awk '{ print $5 }' <<< $result)
     echo "The subdomain $subdomain is a $record_type record and points to $destination"
