@@ -2,16 +2,24 @@
 #This script displays information about reconfigured subdomains
 #shellcheck disable=SC2086
 
+func () {
+    domain="$1"
+    subdomain="$2"
+    result=$(dig $domain.$subdomain | grep -A1 'ANSWER SECTION:' | cut -d ':' -f2-)
+    record_type=$(awk '{ print $4 }' <<< $result)
+    destination=$(awk '{ print $5 }' <<< $result)
+    echo "The subdomain" $subdomain "is a" $record_type "record and points to" $destination
+}
+
 domain="$1"
 subdomain="$2"
-result=$(dig $domain $subdomain | grep -A1 'ANSWER SECTION:' | cut -d ':' -f2-)
-record_type=$(awk '{ print $4 }' <<< $result)
-destination=$(awk '{ print $5 }' <<< $result)
 
-if [ -z "$2" ]
-    then
-        domain="www"
-        echo "The subdomain" $domain "is a" $record_type "record and points to" $destination
-    else
-        echo "The subdomain" $subdomain "is a" $record_type "record and points to" $destination
+if [ -z "$subdomain" ]
+then
+    func "$domain" "$subdomain"
+else
+    func "$domain" "www"
+    func "$domain" "lb-01"
+    func "$domain" "web-01"
+    func "$domain" "web-02"
 fi
