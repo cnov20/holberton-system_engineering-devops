@@ -2,7 +2,6 @@
 #This script displays information about reconfigured subdomains
 #shellcheck disable=SC2086
 
-
 domain="$1"
 subdomain="$2"
 result=$(dig $domain $subdomain | grep -A1 'ANSWER SECTION:' | cut -d ':' -f2-)
@@ -11,7 +10,8 @@ destination=$(awk '{ print $5 }' <<< $result)
 
 if [ -z "$2" ]
     then
-        echo "The subdomain" "www is a" $record_type "record and points to" $destination
+        domain="www"
+        echo "The subdomain" $domain "is a" $record_type "record and points to" $destination
     else
         echo "The subdomain" $subdomain "is a" $record_type "record and points to" $destination
 fi
