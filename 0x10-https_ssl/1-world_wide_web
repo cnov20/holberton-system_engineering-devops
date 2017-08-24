@@ -2,7 +2,7 @@
 #This script displays information about reconfigured subdomains
 #shellcheck disable=SC2086
 
-func () {
+stringFormat () {
     domain="$1"
     subdomain="$2"
     result=$(dig $domain $subdomain | grep -A1 'ANSWER SECTION:' | cut -d ':' -f2-)
@@ -16,10 +16,10 @@ subdomain="$2"
 
 if [ -z "$subdomain" ]
 then
-    func "$domain" "www"
-    func "$domain" "lb-01"
-    func "$domain" "web-01"
-    func "$domain" "web-02"
+    stringFormat "$domain" "www"
+    stringFormat "$domain" "lb-01"
+    stringFormat "$domain" "web-01"
+    stringFormat "$domain" "web-02"
 else
-   func "$domain" "$subdomain"
+   stringFormat "$domain" "$subdomain"
 fi
