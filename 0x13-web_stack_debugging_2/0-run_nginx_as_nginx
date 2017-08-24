@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Configure nginx to run as nginx user rather than root
+# This is for security purposes - if server is hacked / security breached
+# The hacker is limited by the permissions of nginx user as opposed to root(su)
+
+sudo su
+su - nginx
+/usr/sbin/nginx -c /vagrant/nginx.conf
