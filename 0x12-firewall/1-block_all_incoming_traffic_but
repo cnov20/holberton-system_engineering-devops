@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+sudo default deny incoming
+sudo default allow outgoing
+sudo default allow ssh
+sudo default allow https
+sudo default allow http
