@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configure nginx to run as nginx user rather than root
+# This is for security purposes - if server is hacked / security breached
+# The hacker is limited by the permissions of nginx user as opposed to root(su)
+sudo sed -i '4i user nginx;' /etc/nginx/nginx.conf
+sudo sed -i 's/768/1024/g' /etc/nginx/nginx.conf
+sudo sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
+sudo pkill apache2
+service nginx restart
