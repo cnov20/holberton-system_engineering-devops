@@ -3,5 +3,5 @@
 
 exec { 'Modify a line of /var/www/html/wp-settings':
   path    => ['/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'],
-  command => "sed -i 's/phpp/php/g' /var/www/html/wp-settings.php"
+  command => "sed -i 's/phpp/php/g' /var/www/html/wp-settings.php; service apache2 restart"
 }
