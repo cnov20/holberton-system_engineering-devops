@@ -2,6 +2,7 @@
 # By finding and replacing erroneously named Wordpress filename in WP settings
 
 file { '/var/www/html/wp-settings.php':
+  include stdlib
   ensure => present,
 }->
 file_line { 'Append a line to /var/www/html/wp-settings.php':
