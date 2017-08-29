@@ -8,7 +8,7 @@ exec {
 file { '/var/www/html/wp-settings.php':
   include stdlib
   ensure => present,
-}->
+}
 
 file_line { 'Append a line to /var/www/html/wp-settings.php':
   path  => '/var/www/html/wp-settings.php',
