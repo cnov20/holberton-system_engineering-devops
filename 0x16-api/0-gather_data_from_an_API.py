@@ -41,4 +41,4 @@ print('({}/{}):'.format(tasksCompleted, tasksTotal))
 for item in resultsTodos:
     completed = item.get('completed')
     if completed:
-        print('\t', item.get('title'))
+        print('\t ', item.get('title'))
