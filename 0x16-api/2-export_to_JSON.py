@@ -3,7 +3,7 @@
 """
 Python script that, using linked to REST API,
 for a given employee ID, returns information
-about his/her TODO list progress and exports to CSV file.
+about his/her TODO list progress and exports to JSON file.
 """
 
 import csv
