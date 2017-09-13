@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 
 '''
-
 Python script that, using linked to REST API,
 for a given employee ID, returns information
 about his/her TODO list progress.
-
 '''
 
-if __name__ == '__main__':
+from os import getenv
+from sys import argv
+import requests
+import json
 
-    from os import getenv
-    from sys import argv
-    import requests
-    import json
+
+
+if __name__ == '__main__':
 
     url = 'https://jsonplaceholder.typicode.com'
     tasks = '/todos?'
