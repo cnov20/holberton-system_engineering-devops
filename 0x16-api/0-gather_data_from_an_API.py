@@ -8,7 +8,7 @@ about his/her TODO list progress.
 
 from sys import argv
 import requests
-
+import json
 
 if __name__ == '__main__':
 
@@ -25,19 +25,19 @@ if __name__ == '__main__':
     reqTodos = requests.get(fullPathTodos, params=params)
     resultsTodos = reqTodos.json()
 
-print('Employee {} is done with tasks'.format(name), end="")
+    print('Employee {} is done with tasks'.format(name), end="")
 
-tasksCompleted = 0
-tasksTotal = 0
-for item in resultsTodos:
-    completed = item.get('completed')
-    if completed:
-        tasksCompleted += 1
-    tasksTotal += 1
+    tasksCompleted = 0
+    tasksTotal = 0
+    for item in resultsTodos:
+        completed = item.get('completed')
+        if completed:
+            tasksCompleted += 1
+            tasksTotal += 1
 
-print('({}/{}):'.format(tasksCompleted, tasksTotal))
+    print('({}/{}):'.format(tasksCompleted, tasksTotal))
 
-for item in resultsTodos:
-    completed = item.get('completed')
-    if completed:
-        print('\t', item.get('title'))
+    for item in resultsTodos:
+        completed = item.get('completed')
+        if completed:
+            print('\t', item.get('title'))
