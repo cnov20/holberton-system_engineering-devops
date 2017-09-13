@@ -6,11 +6,8 @@ for a given employee ID, returns information
 about his/her TODO list progress.
 '''
 
-from os import getenv
 from sys import argv
 import requests
-import json
-
 
 
 if __name__ == '__main__':
