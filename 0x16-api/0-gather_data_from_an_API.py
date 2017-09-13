@@ -8,23 +8,25 @@ about his/her TODO list progress.
 
 '''
 
-from os import getenv
-from sys import argv
-import requests
-import json
+if __name__ == '__main__':
 
-url = 'https://jsonplaceholder.typicode.com'
-tasks = '/todos?'
-users = '/users/'
-employeeID = argv[1]
-fullPathUsers = url + users + employeeID
-fullPathTodos = url + tasks + employeeID
-params = {'userId': employeeID}
-reqUsers = requests.get(fullPathUsers)
-resultsUsers = reqUsers.json()
-name = resultsUsers.get('name')
-reqTodos = requests.get(fullPathTodos, params=params)
-resultsTodos = reqTodos.json()
+    from os import getenv
+    from sys import argv
+    import requests
+    import json
+
+    url = 'https://jsonplaceholder.typicode.com'
+    tasks = '/todos?'
+    users = '/users/'
+    employeeID = argv[1]
+    fullPathUsers = url + users + employeeID
+    fullPathTodos = url + tasks + employeeID
+    params = {'userId': employeeID}
+    reqUsers = requests.get(fullPathUsers)
+    resultsUsers = reqUsers.json()
+    name = resultsUsers.get('name')
+    reqTodos = requests.get(fullPathTodos, params=params)
+    resultsTodos = reqTodos.json()
 
 print('Employee {} is done with tasks'.format(name), end="")
 
