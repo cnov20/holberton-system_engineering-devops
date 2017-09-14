@@ -11,6 +11,11 @@ import requests
 
 def number_of_subscribers(subreddit):
 
+    '''
+    Method finds the num of subscribers in given subreddit
+    subreddit: given subreddit to be make request to
+    '''
+
     ua = UserAgent()
     headers = {'User-Agent': str(ua.random)}
     url = 'https://www.reddit.com/r/' + subreddit + '/about.json'
