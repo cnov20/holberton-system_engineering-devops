@@ -21,7 +21,8 @@ def top_ten(subreddit):
         'Chrome/39.0.2171.95 Safari/537.36'
     }
     url = 'https://www.reddit.com/r/' + subreddit + '/hot.json'
-    response = requests.get(url, headers=headers,  allow_redirects=False).json()
+    response = requests.get(url, headers=headers,
+                            allow_redirects=False).json()
     if response.get('error'):
         print (None)
         return None
