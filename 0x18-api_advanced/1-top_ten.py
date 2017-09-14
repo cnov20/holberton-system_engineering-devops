@@ -25,7 +25,7 @@ def top_ten(subreddit):
                             allow_redirects=False).json()
 
     if response.get('error'):
-        print (None)
+        print(None)
         return
 
     postsList = response.get('data').get('children')[0:10]
