@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 '''
-This is module utilizes the Reddit API to make API calls,
+This module utilizes the Reddit API to make API calls,
 which query for total number of subscribers for a given subreddit
 '''
 
@@ -19,7 +19,8 @@ def number_of_subscribers(subreddit):
                'AppleWebKit/537.36 (KHTML, like Gecko)'
                'Chrome/39.0.2171.95 Safari/537.36'}
     url = 'https://www.reddit.com/r/' + subreddit + '/about.json'
-    response = requests.get(url, headers=headers).json()
+    response = requests.get(url, headers=headers,
+                            allow_redirects=False).json()
     if response.get('error'):
         return (0)
     else:
