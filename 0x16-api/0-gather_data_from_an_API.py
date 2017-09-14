@@ -33,7 +33,7 @@ if __name__ == '__main__':
         completed = item.get('completed')
         if completed:
             tasksCompleted += 1
-            tasksTotal += 1
+        tasksTotal += 1
 
     print('({}/{}):'.format(tasksCompleted, tasksTotal))
 
