@@ -32,4 +32,4 @@ def top_ten(subreddit):
         for post in postsList:
             data = post.get('data')
             title = data.get('title')
-            print(title)
+            print('{}'.format(title))
