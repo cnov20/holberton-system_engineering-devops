@@ -20,7 +20,7 @@ def top_ten(subreddit):
         'AppleWebKit/537.36 (KHTML, like Gecko)'
         'Chrome/39.0.2171.95 Safari/537.36'
     }
-    url = 'https://www.reddit.com/r/' + subreddit + '/hot.json'
+    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     response = requests.get(url, headers=headers,
                             allow_redirects=False).json()
 
