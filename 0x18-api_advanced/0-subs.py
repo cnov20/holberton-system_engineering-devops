@@ -8,6 +8,7 @@ which query for total number of subscribers for a given subreddit
 from fake_useragent import UserAgent
 import requests
 
+
 def number_of_subscribers(subreddit):
 
     ua = UserAgent()
