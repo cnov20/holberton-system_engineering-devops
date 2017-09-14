@@ -32,12 +32,3 @@ def top_ten(subreddit):
             data = post.get('data')
             title = data.get('title')
             print(title)
-
-'''
-            scoreList.append(score)
-
-            for i in range(len(topTen)):
-                title = data.get('title')
-                if score in topTen:
-                    print(title)
-'''
