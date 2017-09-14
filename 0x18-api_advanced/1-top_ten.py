@@ -21,15 +21,12 @@ def top_ten(subreddit):
         'Chrome/39.0.2171.95 Safari/537.36'
     }
     url = 'https://www.reddit.com/r/' + subreddit + '/hot.json'
-    response = requests.get(url, headers=headers).json()
+    response = requests.get(url, headers=headers,  allow_redirects=False).json()
     if response.get('error'):
         print (None)
         return None
     else:
         postsList = response.get('data').get('children')[0:10]
-        if len(postsList) is 0:
-            print (None)
-            return None
 
         for post in postsList:
             data = post.get('data')
