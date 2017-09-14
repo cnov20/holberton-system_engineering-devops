@@ -27,7 +27,7 @@ def top_ten(subreddit):
         return None
     else:
         postsList = response.get('data').get('children')[0:10]
-        if (postsList) is None:
+        if len(postsList) is 0:
             print (None)
             return None
 
