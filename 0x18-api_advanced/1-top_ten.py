@@ -23,9 +23,10 @@ def top_ten(subreddit):
     url = 'https://www.reddit.com/r/' + subreddit + '/hot.json'
     response = requests.get(url, headers=headers,
                             allow_redirects=False).json()
+
     if response.get('error'):
         print (None)
-        return None
+        return
 
     postsList = response.get('data').get('children')[0:10]
 
