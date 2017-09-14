@@ -5,7 +5,6 @@ This is module utilizes the Reddit API to make API calls,
 which query for total number of subscribers for a given subreddit
 '''
 
-from fake_useragent import UserAgent
 import requests
 
 
@@ -16,8 +15,9 @@ def number_of_subscribers(subreddit):
     subreddit: given subreddit to be make request to
     '''
 
-    ua = UserAgent()
-    headers = {'User-Agent': str(ua.random)}
+    headers = {'User-Agent': 'Mozilla/5.0; (Macintosh Intel Mac OS X 10_10_1)'
+               'AppleWebKit/537.36 (KHTML, like Gecko)'
+               'Chrome/39.0.2171.95 Safari/537.36'}
     url = 'https://www.reddit.com/r/' + subreddit + '/about.json'
     response = requests.get(url, headers=headers).json()
     if response.get('error'):
