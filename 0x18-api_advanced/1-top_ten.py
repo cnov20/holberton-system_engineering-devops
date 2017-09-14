@@ -26,10 +26,10 @@ def top_ten(subreddit):
     if response.get('error'):
         print (None)
         return None
-    else:
-        postsList = response.get('data').get('children')[0:10]
 
-        for post in postsList:
-            data = post.get('data')
-            title = data.get('title')
-            print('{}'.format(title))
+    postsList = response.get('data').get('children')[0:10]
+
+    for post in postsList:
+        data = post.get('data')
+        title = data.get('title')
+        print('{}'.format(title))
