@@ -20,9 +20,8 @@ def number_of_subscribers(subreddit):
     headers = {'User-Agent': str(ua.random)}
     url = 'https://www.reddit.com/r/' + subreddit + '/about.json'
     response = requests.get(url, headers=headers).json()
-    responseStatus = requests.get(url, headers=headers)
-    if responseStatus.status_code != 200:
+    if response.get('error'):
         return (0)
     else:
         subscribers = response.get('data').get('subscribers')
-        return (subscribers)
+        return(subscribers)
