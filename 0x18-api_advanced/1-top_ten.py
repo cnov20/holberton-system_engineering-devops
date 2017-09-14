@@ -24,8 +24,8 @@ def top_ten(subreddit):
     response = requests.get(url, headers=headers).json()
     if response.get('error'):
         print (None)
+        return None
     else:
-        topTen = []
         postsList = response.get('data').get('children')[0:10]
         for post in postsList:
             data = post.get('data')
