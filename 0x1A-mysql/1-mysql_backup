@@ -3,5 +3,5 @@
 # taking a password as command line argument and generating
 # a compressed tar archive
 password=$1;
-mysqldump -p$password -u root --all-databases --result-file=backup.sql;
-tar --create --gzip -vf $(date +%d-%m-%Y).tar.gz backup.sql;
+mysqldump -p"$password" -u root --all-databases --result-file=backup.sql;
+tar --create --gzip -vf "$(date +%d-%m-%Y).tar.gz" backup.sql;
