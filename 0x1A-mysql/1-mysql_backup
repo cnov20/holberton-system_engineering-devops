@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+password=$1;
+mysqldump -p$password -u root --all-databases --result-file=backup.sql;
+tar --create --gzip -vf $(date +%d-%m-%Y).tar.gz backup.sql;
